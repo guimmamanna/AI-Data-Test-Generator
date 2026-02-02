@@ -87,7 +87,7 @@ Artifacts (data files + run_metadata.json + validation_report.json)
 ```
 
 <div align="center">
-<img src="docs/architecture.svg" alt="SynthTest AI Architecture Diagram" width="900"/>
+<img src="./docs/architecture.svg" alt="SynthTest AI Architecture Diagram" width="900"/>
 </div>
 
 ---
