@@ -81,6 +81,10 @@ Exporters (CSV / JSON / SQL)
 Validator + Reports
 ```
 
+<div align="center">
+<img src="docs/architecture.svg" alt="SynthTest AI Architecture Diagram" width="900"/>
+</div>
+
 ---
 
 ## Tech Stack

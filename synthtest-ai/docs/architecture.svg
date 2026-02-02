@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <defs>
+    <style>
+      .node { fill: #ffffff; stroke: #1f2a2e; stroke-width: 2; rx: 14; }
+      .label { font-family: Arial, Helvetica, sans-serif; font-size: 14px; font-weight: 600; fill: #1f2a2e; }
+      .sub { font-weight: 400; }
+      .edge { stroke: #1f2a2e; stroke-width: 2; fill: none; }
+    </style>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#1f2a2e" />
+    </marker>
+  </defs>
+
+  <!-- Nodes -->
+  <rect class="node" x="420" y="40" width="360" height="80" rx="14" />
+  <text class="label" x="600" y="72" text-anchor="middle">
+    <tspan x="600" dy="0">CLI / REST API</tspan>
+    <tspan x="600" dy="20" class="sub">Config-as-code</tspan>
+  </text>
+
+  <rect class="node" x="420" y="150" width="360" height="80" rx="14" />
+  <text class="label" x="600" y="182" text-anchor="middle">
+    <tspan x="600" dy="0">Orchestrator</tspan>
+    <tspan x="600" dy="20" class="sub">run mgmt, seeds, caching, metadata</tspan>
+  </text>
+
+  <rect class="node" x="160" y="270" width="360" height="80" rx="14" />
+  <text class="label" x="340" y="302" text-anchor="middle">
+    <tspan x="340" dy="0">Schema Manager</tspan>
+    <tspan x="340" dy="20" class="sub">DB / OpenAPI / DSL</tspan>
+  </text>
+
+  <rect class="node" x="680" y="270" width="360" height="80" rx="14" />
+  <text class="label" x="860" y="302" text-anchor="middle">
+    <tspan x="860" dy="0">Profiler / Inference</tspan>
+    <tspan x="860" dy="20" class="sub">stats, patterns, corr</tspan>
+  </text>
+
+  <rect class="node" x="420" y="390" width="360" height="80" rx="14" />
+  <text class="label" x="600" y="422" text-anchor="middle">
+    <tspan x="600" dy="0">Planner</tspan>
+    <tspan x="600" dy="20" class="sub">dependency graph, generation plan</tspan>
+  </text>
+
+  <rect class="node" x="420" y="510" width="360" height="80" rx="14" />
+  <text class="label" x="600" y="542" text-anchor="middle">
+    <tspan x="600" dy="0">Generator Core</tspan>
+    <tspan x="600" dy="20" class="sub">rule + stats + ML plugins</tspan>
+  </text>
+
+  <rect class="node" x="420" y="630" width="360" height="80" rx="14" />
+  <text class="label" x="600" y="662" text-anchor="middle">
+    <tspan x="600" dy="0">Validator</tspan>
+    <tspan x="600" dy="20" class="sub">schema, rules, PII</tspan>
+  </text>
+
+  <rect class="node" x="420" y="750" width="360" height="80" rx="14" />
+  <text class="label" x="600" y="782" text-anchor="middle">
+    <tspan x="600" dy="0">Export Layer</tspan>
+    <tspan x="600" dy="20" class="sub">CSV / JSON / SQL / DB</tspan>
+  </text>
+
+  <!-- Edges -->
+  <line class="edge" x1="600" y1="120" x2="600" y2="150" marker-end="url(#arrow)" />
+  <line class="edge" x1="600" y1="230" x2="340" y2="270" marker-end="url(#arrow)" />
+  <line class="edge" x1="600" y1="230" x2="860" y2="270" marker-end="url(#arrow)" />
+  <line class="edge" x1="340" y1="350" x2="600" y2="390" marker-end="url(#arrow)" />
+  <line class="edge" x1="860" y1="350" x2="600" y2="390" marker-end="url(#arrow)" />
+  <line class="edge" x1="600" y1="470" x2="600" y2="510" marker-end="url(#arrow)" />
+  <line class="edge" x1="600" y1="590" x2="600" y2="630" marker-end="url(#arrow)" />
+  <line class="edge" x1="600" y1="710" x2="600" y2="750" marker-end="url(#arrow)" />
+</svg>
