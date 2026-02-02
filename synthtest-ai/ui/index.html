@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SynthTest AI | Synthetic Data Studio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="ambient">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="grid"></div>
+    </div>
+
+    <header class="hero">
+      <div class="hero-left">
+        <div class="badge">SynthTest AI • deterministic synthetic data</div>
+        <h1>
+          Synthetic datasets with
+          <span class="accent">constraint fidelity</span>
+          and edge-case control.
+        </h1>
+        <p>
+          Generate reproducible, schema-valid datasets for QA, CI, and analytics. Enforce
+          primary keys, foreign keys, enum ranges, and conditional rules while injecting
+          boundary, null-heavy, or intentionally invalid profiles.
+        </p>
+        <div class="hero-actions">
+          <button class="primary" id="generateBtn">Generate demo dataset</button>
+          <button class="ghost" id="loadExampleBtn">Load ecommerce example</button>
+        </div>
+        <div class="hero-meta">
+          <div>
+            <span class="meta-label">Mode</span>
+            <span id="modeChip" class="chip">valid</span>
+          </div>
+          <div>
+            <span class="meta-label">Seed</span>
+            <span id="seedChip" class="chip">4242</span>
+          </div>
+          <div>
+            <span class="meta-label">Tables</span>
+            <span id="tableCount" class="chip">3</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="stat-card">
+          <div class="stat-label">Dataset ID</div>
+          <div class="stat-value" id="datasetId">synth-000000</div>
+          <div class="stat-sub">Config hash: <span id="configHash">---</span></div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Run metadata</div>
+          <ul>
+            <li><span>Rows</span><span id="rowCount">0</span></li>
+            <li><span>Repair attempts</span><span id="repairCount">0</span></li>
+            <li><span>Constraint coverage</span><span id="coverageCount">0</span></li>
+          </ul>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Validation</div>
+          <div class="stat-value" id="violationCount">0 violations</div>
+          <div class="stat-sub">Foreign keys, enums, ranges, regex checked.</div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="workspace">
+        <div class="panel editor">
+          <div class="panel-header">
+            <h2>Schema DSL</h2>
+            <div class="panel-actions">
+              <button class="ghost" id="copySchemaBtn">Copy</button>
+              <button class="ghost" id="formatSchemaBtn">Format</button>
+            </div>
+          </div>
+          <textarea id="schemaInput" spellcheck="false"></textarea>
+          <div class="panel-footer">
+            <span class="hint">Supports YAML or JSON.</span>
+            <span id="schemaStatus" class="status">Ready</span>
+          </div>
+        </div>
+
+        <div class="panel controls">
+          <div class="panel-header">
+            <h2>Run configuration</h2>
+          </div>
+          <div class="form-grid">
+            <label>
+              Dataset name
+              <input type="text" id="datasetName" value="ecommerce" />
+            </label>
+            <label>
+              Seed
+              <input type="number" id="seedInput" value="4242" />
+            </label>
+            <label>
+              Mode
+              <select id="modeInput">
+                <option value="valid">valid</option>
+                <option value="invalid">invalid</option>
+              </select>
+            </label>
+            <label>
+              Output format
+              <select id="formatInput">
+                <option value="csv">csv</option>
+                <option value="json">json</option>
+                <option value="sql">sql</option>
+              </select>
+            </label>
+          </div>
+          <div class="panel-sub">
+            <div class="sub-card">
+              <h3>Edge-case profile</h3>
+              <p>Toggle boundary-heavy, null-heavy, and invalid-heavy modes.</p>
+              <div class="toggles">
+                <label><input type="checkbox" id="boundaryToggle" checked /> Boundary-heavy</label>
+                <label><input type="checkbox" id="nullToggle" checked /> Null-heavy</label>
+                <label><input type="checkbox" id="invalidToggle" /> Invalid-heavy</label>
+              </div>
+            </div>
+            <div class="sub-card">
+              <h3>Export</h3>
+              <p>Download preview rows as CSV or NDJSON.</p>
+              <div class="button-row">
+                <button class="ghost" id="downloadCsvBtn">Download CSV</button>
+                <button class="ghost" id="downloadJsonBtn">Download NDJSON</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="output">
+        <div class="panel preview">
+          <div class="panel-header">
+            <h2>Dataset preview</h2>
+            <div class="panel-actions">
+              <select id="tableSelect"></select>
+            </div>
+          </div>
+          <div class="table-wrap">
+            <table id="previewTable"></table>
+          </div>
+        </div>
+        <div class="panel report">
+          <div class="panel-header">
+            <h2>Validation report</h2>
+          </div>
+          <div class="report-grid">
+            <div class="report-card">
+              <h3>Summary</h3>
+              <ul id="reportSummary"></ul>
+            </div>
+            <div class="report-card">
+              <h3>Constraint coverage</h3>
+              <div id="coverageBars" class="bars"></div>
+            </div>
+            <div class="report-card">
+              <h3>Rule checks</h3>
+              <div id="rulesList" class="rules"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="flow">
+        <div class="panel flow-panel">
+          <h2>Generation flow</h2>
+          <div class="flow-steps">
+            <div class="step">
+              <span class="step-num">01</span>
+              <h3>Plan dependencies</h3>
+              <p>Build DAG from foreign keys and topologically sort tables.</p>
+            </div>
+            <div class="step">
+              <span class="step-num">02</span>
+              <h3>Generate rows</h3>
+              <p>Create primary keys, apply distributions, then inject edge cases.</p>
+            </div>
+            <div class="step">
+              <span class="step-num">03</span>
+              <h3>Repair & validate</h3>
+              <p>Retry invalid rows and produce a constraint coverage report.</p>
+            </div>
+          </div>
+        </div>
+        <div class="panel flow-panel">
+          <h2>CLI quick commands</h2>
+          <pre><code>pip install -e .
+
+synthtest generate --config examples/ecommerce.yml --out ./out --format csv
+synthtest validate --config examples/ecommerce.yml --data ./out --format csv</code></pre>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <span>SynthTest AI UI mock • deterministic, reproducible, traceable.</span>
+        <span>Ready for REST API integration.</span>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

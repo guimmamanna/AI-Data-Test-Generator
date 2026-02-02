@@ -1,0 +1,2 @@
+[console_scripts]
+synthtest = synthtest.cli:main

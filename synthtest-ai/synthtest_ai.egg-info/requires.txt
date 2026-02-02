@@ -1,0 +1,6 @@
+pydantic>=2.5
+PyYAML>=6.0
+
+[api]
+fastapi>=0.110
+uvicorn>=0.27

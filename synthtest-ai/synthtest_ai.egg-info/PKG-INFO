@@ -1,0 +1,127 @@
+Metadata-Version: 2.4
+Name: synthtest-ai
+Version: 0.1.0
+Summary: SynthTest AI: deterministic synthetic test data generator
+Author: SynthTest AI
+License: MIT
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+Requires-Dist: pydantic>=2.5
+Requires-Dist: PyYAML>=6.0
+Provides-Extra: api
+Requires-Dist: fastapi>=0.110; extra == "api"
+Requires-Dist: uvicorn>=0.27; extra == "api"
+
+# SynthTest AI
+
+Generate realistic, compliant, repeatable synthetic datasets from schemas for automated tests and data pipelines.
+
+## Quickstart
+```bash
+python -m venv .venv && source .venv/bin/activate
+pip install -e .
+
+synthtest generate --config examples/ecommerce.yml --out ./out --format csv
+synthtest validate --config examples/ecommerce.yml --data ./out --format csv
+```
+
+## Example config snippet
+```yaml
+dataset:
+  name: ecommerce
+  seed: 4242
+  mode: valid
+  size:
+    customers: 100
+    orders: 300
+  max_attempts: 25
+
+tables:
+  orders:
+    primary_key: order_id
+    foreign_keys:
+      - column: customer_id
+        ref_table: customers
+        ref_column: customer_id
+    columns:
+      order_id: { type: uuid }
+      customer_id: { type: uuid }
+      status:
+        type: enum
+        values: [PAID, FAILED, REFUNDED]
+        weights: [0.7, 0.2, 0.1]
+      total_amount:
+        type: decimal
+        range: [0, 2000]
+        distribution: lognormal
+
+rules:
+  - if: "orders.status == 'FAILED'"
+    then:
+      - "orders.total_amount <= 500.0"
+```
+
+## Valid vs invalid mode
+- `valid`: enforces constraints, repairs violations, and aims for zero errors.
+- `invalid`: injects boundary, null-heavy, and invalid-heavy values to stress validators.
+
+## Sample report JSON
+```json
+{
+  "dataset": "ecommerce",
+  "mode": "valid",
+  "total_violations": 0,
+  "constraint_coverage": {
+    "type": 1200,
+    "nullable": 1200,
+    "range": 600,
+    "regex": 200,
+    "enum": 300,
+    "unique": 100,
+    "foreign_key": 800
+  },
+  "tables": {
+    "orders": {
+      "table": "orders",
+      "row_count": 300,
+      "violations": {},
+      "rule_violations": 0,
+      "failed_rows": 0,
+      "constraint_coverage": {"type": 1200},
+      "repair_attempts": 320
+    }
+  }
+}
+```
+
+## Determinism
+- Global seed controls all randomness.
+- Per-table RNGs are derived from the global seed for reproducible outputs.
+- Reports include constraint coverage counts to show how thoroughly rules were exercised.
+
+## Architecture
+```
++------------------+         +-----------------+         +------------------+
+|  Schema DSL      | ----->  |  Planner (DAG)  | ----->  |  Generator Core  |
+|  (YAML/JSON)     |         |  Topo Sort      |         |  Column Gens     |
++------------------+         +-----------------+         +------------------+
+            |                                             |         |
+            |                                             |         v
+            |                                             |  Edge Cases + Rules
+            |                                             v         |
+            |                                      +------------------+
+            |                                      |  Exporters        |
+            |                                      |  CSV / JSON / SQL |
+            |                                      +------------------+
+            v
++------------------+         +-----------------+
+|  Validator       | <-----  |  Output Files   |
+|  Reports + Stats |         |  + metadata     |
++------------------+         +-----------------+
+```
+
+## CLI
+See `docs/cli.md`.
+
+## License
+MIT

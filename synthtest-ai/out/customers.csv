@@ -1,0 +1,101 @@
+customer_id,name,email,phone,country,postcode,created_at
+cf90a3c4-f505-46df-9a98-b8ea1535da5f,Alex Jones,taylor.smith@demo.dev,+442105611049,United Kingdom,EH9 1JN,2025-01-01T00:00:00
+54b83099-fc73-7536-c4a3-e51b19ca722c,Avery Wilson,quinn.miller@sample.org,+18703952150,Germany,W3 5MO,2024-10-10T13:27:53
+dab45789-6d01-29da-a40e-10188373845c,Casey Garcia,quinn.clark@demo.dev,+440958736354,Australia,B1 5XJ,2024-08-27T01:55:33
+e8a4fa15-3cc6-f2e4-cc5d-b04a0f9040fb,Alex Wilson,jamie.patel@demo.dev,+15249009373,Japan,NE2 0YN,2024-09-22T10:06:42
+06ac8e0e-42f1-0917-f9d1-4f93b267db7f,Jamie Wilson,alex.miller@example.com,+10899384230,France,,2024-08-06T18:34:42
+47d05437-1579-19a4-e458-1529e4026895,Sam Brown,taylor.kim@test.local,,United Kingdom,W2 4CW,2023-01-01T00:00:00
+0ca6e7d0-15d0-3788-8021-4f4891e11295,Riley Garcia,jordan.smith@example.com,+13810268118,Brazil,S3 6GI,2024-01-06T20:16:05
+6095efa5-5049-057a-8501-b1cdfb3b4352,Avery Patel,sam.jones@example.com,+449944437820,Japan,EH4 8SR,2023-10-14T16:45:45
+652a91e5-90d2-863f-598a-1455de7e8cec,Riley Davis,casey.brown@sample.org,+338986272689,Canada,G6 5UZ,2023-05-01T16:43:27
+dcd91741-aaf3-96cd-8716-0318b66d07c6,Quinn Jones,quinn.clark@sample.org,+490755600148,Canada,L6 8MR,2024-01-04T06:39:37
+57925d67-84d0-c896-8697-7a9db9604943,Riley Wilson,morgan.smith@test.local,+610082420002,United Kingdom,M5 7FF,2023-06-25T04:16:06
+77b3a40b-76a6-fb35-cb5a-9f4bcb0bf07b,Jamie Smith,alex.smith@sample.org,+818963301268,Brazil,M4 8XA,2023-02-09T18:16:07
+b07cbe38-0f5a-e1cf-c8a2-b024eb48513e,Quinn Wilson,jamie.smith@demo.dev,+491673771110,Japan,,2023-01-01T00:00:00
+54e480f1-9d93-b104-5445-d023b152c043,Jordan Kim,jordan.kim@example.com,+445674419453,United States,WC2 4BQ,2023-09-20T11:34:31
+ee53db27-db7a-6044-50ca-f176ff78ae39,Casey Clark,quinn.smith@sample.org,+441066455462,Germany,M6 2OK,2023-12-30T17:07:21
+3b7b3115-5fd7-1b94-2ef0-91f82a0c6f52,Riley Garcia,alex.davis@example.com,+336879670735,Japan,NE5 7WO,2024-01-24T00:56:10
+1660b2d7-9bdf-d53f-f85f-ec555e671337,Casey Smith,riley.garcia@example.com,+814946761276,Australia,EC7 4LA,2024-05-03T00:48:41
+52a2816f-6fca-0e38-75ca-194fc24e9830,Quinn Smith,avery.clark@test.local,+336191477515,Germany,E2 4JP,2024-06-15T02:13:39
+86b48413-710f-0cfe-4773-7a31c5cb5704,Jamie Kim,jordan.smith@sample.org,+618411118673,Canada,B3 7KK,2024-11-24T03:39:59
+f03b724f-a6bd-1235-f0ed-0e0f7c5e2061,Casey Brown,jamie.garcia@example.com,+337239730095,Japan,,2024-10-17T02:03:38
+4d0c59a6-28fa-fcef-f0bb-4d77aed58101,Taylor Wilson,morgan.wilson@demo.dev,+445612964978,France,L6 4OP,2024-09-27T15:00:49
+2527b9d0-40a9-4d3a-6354-259492e31cee,Quinn Brown,taylor.clark@demo.dev,+332311078312,Canada,EC1 0DC,2024-02-11T15:30:31
+e188e89c-4f45-6c79-556a-3ab789f75455,Morgan Brown,morgan.davis@example.com,+817383213465,United Kingdom,WC6 9QK,2025-01-01T00:00:00
+fa8e911b-bd46-3ba0-82f8-005ca2ce9fec,Alex Patel,alex.davis@test.local,+613295971165,Germany,EH7 6AF,2023-01-11T06:34:53
+9cb5b837-9f4b-1f34-0591-3e3dc1e0dc01,Jordan Smith,alex.kim@test.local,+611405226394,Canada,EH6 9RT,2023-06-03T12:47:42
+83589b61-6ae8-a102-ffa2-9c83af84c95b,Jamie Patel,riley.kim@test.local,+334089945438,France,M1 7BT,2023-05-13T19:24:16
+d81da416-9c3a-421e-9580-cc3ab98cdb73,Casey Smith,jordan.davis@demo.dev,+818718293359,Germany,,2025-01-01T00:00:00
+7a623cbe-9097-ce7a-ce2a-796409c5dd9d,Quinn Brown,quinn.brown@example.com,+442734081334,Brazil,B2 7MS,2023-01-01T00:00:00
+9e86688d-16fa-bdff-4b59-9252f8f12da1,Quinn Kim,jordan.patel@demo.dev,,Germany,EH1 4XG,2024-06-04T06:06:08
+881357de-b53b-49a1-044d-9f0907a37171,Sam Davis,jordan.clark@sample.org,+499028788752,Australia,SW4 2XS,2023-04-02T06:11:25
+babd95a0-6276-2296-8837-59672044d760,Riley Patel,sam.clark@example.com,+334748696467,Australia,WC1 8VZ,2024-12-30T05:50:55
+29a83e44-7d43-bc58-c1d5-2b3cc09e4e96,Alex Patel,quinn.jones@demo.dev,+613994003658,Canada,SE3 2IW,2025-01-01T00:00:00
+260efd81-a560-1471-f49d-d14f74a6aca1,Sam Smith,taylor.clark@example.com,+12073315945,Canada,S3 8MW,2024-03-19T05:37:54
+08a9924d-810d-4a5f-deab-bccf4fb22096,Riley Miller,jamie.clark@demo.dev,+499947363077,Canada,SW8 6MI,2023-07-24T11:39:09
+33bc8405-0a54-a6bc-9fea-b151a6462c08,Avery Clark,sam.smith@example.com,+815204979973,United Kingdom,G2 6AL,2024-04-04T19:42:55
+b2efe0f6-f5e4-2b55-71d6-9fe98339e1b6,Morgan Clark,sam.davis@example.com,+816825099128,United Kingdom,,2023-09-03T14:27:07
+d86d8a01-e726-15db-f47d-22b6e898f970,Jordan Miller,alex.davis@demo.dev,+617737255497,France,EH3 7HZ,2023-08-07T21:44:44
+564d0e58-ba0d-e265-bca8-35474cdbeead,Jordan Wilson,casey.davis@test.local,+441129611738,United Kingdom,G2 8SV,2023-11-29T06:23:59
+2fc4ea9e-724c-4aa9-08d8-2d1f563372c6,Jamie Wilson,taylor.jones@example.com,+812032083227,Canada,NE2 4ZN,2023-05-27T05:33:21
+8239c450-8606-2e04-c580-ea9530bf4656,Jamie Garcia,avery.jones@demo.dev,+818037864817,Canada,G8 9QW,2023-08-10T21:58:40
+aefb7cb5-c66a-c497-343d-a64f92a0d220,Morgan Davis,riley.kim@example.com,+448059233248,United States,B2 5UV,2023-08-28T16:19:58
+ed2a870e-2901-005f-8d0c-a4b6b06896ae,Riley Clark,alex.patel@demo.dev,+12926154912,United States,,2023-02-25T15:06:42
+f0d52dd6-d9e7-c69d-da09-c99ff1d6c3e1,Taylor Garcia,jamie.miller@test.local,,United Kingdom,,2023-07-22T21:13:55
+18a5a5a2-c100-001d-7a9f-46bab2b1b4c4,Sam Davis,jamie.garcia@demo.dev,+812517964104,Canada,NW3 5XA,2024-03-11T13:03:17
+f3c8ea40-b043-2fa9-8a20-0ad3cb37e219,Avery Wilson,sam.garcia@test.local,+498470695511,Brazil,,2024-12-02T02:05:18
+72cc2086-2978-9f64-6a9b-68de170f467b,Sam Garcia,jamie.kim@test.local,+19595126122,United States,NE4 7RR,2023-11-02T04:29:25
+e6004181-236a-3af1-2d38-da65576f30e7,Casey Brown,taylor.kim@sample.org,,France,NE3 4WZ,2023-01-01T00:00:00
+90144c9a-9cb8-816b-fa75-c5300ed47c45,Riley Miller,casey.kim@test.local,+613271433225,Canada,B9 6FC,2024-10-06T00:04:40
+ca730576-3fdc-851c-5b17-f9884e103cd8,Riley Smith,taylor.brown@demo.dev,+615881440294,Germany,SW2 8QE,2024-10-27T12:49:36
+3df15b97-9a11-d3c4-4cd5-546e0d3bb33d,Taylor Smith,jordan.kim@demo.dev,+446285398654,France,G6 8JT,2023-10-06T19:10:54
+1995f4b8-9bff-55e2-4db4-9d147cc57a8a,Avery Clark,morgan.brown@example.com,+615851567723,United States,W8 5UU,2024-05-07T08:35:18
+00f3de17-476c-792b-1bd1-689804548554,Quinn Davis,alex.kim@example.com,+499450961406,Japan,NW6 9UN,2024-07-23T05:00:13
+cd26744c-84c1-d092-111b-bd54859f72eb,Sam Kim,jordan.patel@example.com,+816760485776,Brazil,SW1 6KW,2023-06-20T07:47:24
+e3b615fe-f0b7-8567-0b40-90f644a32fce,Riley Garcia,morgan.brown@demo.dev,+442306070928,Japan,N7 7DP,2024-01-31T05:15:40
+6ba1ef74-685c-b84e-f607-2e83699a10d7,Riley Garcia,sam.patel@demo.dev,+335276654440,Canada,SE3 7IS,2024-03-13T14:19:55
+e0575ac9-df22-edd6-0763-6f6c349da041,Jamie Jones,morgan.davis@demo.dev,+615279708973,Canada,,2023-09-06T13:11:41
+6dc5e81c-60ee-7e0e-1f92-16426e2d910f,Jamie Garcia,taylor.wilson@demo.dev,,United States,,2023-01-01T00:00:00
+98d73126-6823-e555-df16-3e5ec2307269,Taylor Jones,quinn.jones@test.local,+619695021568,Australia,,2024-01-27T22:45:48
+f92b0fc1-9791-f3e2-860e-670bbec95d8e,Alex Patel,riley.smith@test.local,+336135803957,Germany,,2024-04-11T10:57:37
+8333b42b-a232-5de9-81a6-e9e77d4fc55b,Sam Wilson,sam.brown@example.com,+498499625163,Japan,S1 1WG,2024-09-28T12:09:59
+d0efcb46-4a39-4352-911d-dd224eec2fa0,Jamie Wilson,taylor.patel@demo.dev,+336953952440,Brazil,SE3 9ZK,2023-01-22T01:50:16
+99759137-286e-e4ef-e61c-66bd7018ee3c,Quinn Davis,casey.smith@demo.dev,+811175937436,Germany,NW3 8NN,2023-07-31T14:32:01
+007c7b8d-ecfa-d2fa-bf79-66117837133c,Jamie Brown,avery.patel@test.local,+338217025881,United States,,2023-10-20T22:16:36
+827c285c-d225-88a0-a892-a229b76b04ce,Avery Davis,casey.kim@example.com,+12487165391,United Kingdom,,2024-10-31T22:46:06
+bc1409c1-32f1-9c88-15f8-f906d6133b69,Jamie Miller,jamie.davis@sample.org,+445301375049,Brazil,N1 4MU,2024-07-01T10:54:39
+59d70de1-e232-263c-790c-94db3a6eb4cd,Riley Jones,sam.clark@demo.dev,+338603459035,Australia,W3 2YW,2023-05-24T02:38:51
+1586e47c-d19a-6f69-156d-82fb6b390aad,Riley Patel,taylor.miller@test.local,+441172031125,United States,SW2 3XA,2024-02-24T02:41:38
+79ded677-079e-9e41-7f6f-d89352910750,Morgan Brown,sam.miller@demo.dev,+497747386955,France,EH4 4EM,2024-03-14T06:41:13
+12eb2146-d6a7-cdb8-f9da-e4afa0ce55bc,Taylor Miller,taylor.miller@sample.org,+11250797854,Brazil,B2 1NZ,2023-04-21T22:06:13
+e8b35a37-4fbd-d578-23a2-e2846a7bc979,Avery Jones,quinn.jones@example.com,+612871938641,United Kingdom,SW2 9NJ,2024-08-23T16:31:25
+a21c12f5-7678-c445-037a-efc8bea7f6b3,Sam Clark,morgan.kim@example.com,,Germany,WC4 2HD,2025-01-01T00:00:00
+db273aa8-29ca-c886-6b81-e5e9ce40a186,Jamie Patel,sam.garcia@example.com,+449948054368,Germany,,2024-03-09T21:27:56
+81ba910a-54de-0598-b937-939b5fa7930d,Quinn Miller,taylor.garcia@demo.dev,,Japan,L8 1SN,2023-11-17T04:16:02
+42b2c66e-5d27-585d-3a71-f7627e75ed27,Sam Brown,sam.wilson@sample.org,+811942995423,Brazil,,2023-01-01T00:00:00
+84a14d85-bf91-5491-3e3a-57c0546c29c8,Taylor Davis,jamie.jones@test.local,+498055818931,Germany,WC9 3XN,2023-12-14T21:05:13
+7d768b0a-278f-6a21-84e4-a3dd3d168215,Avery Brown,jordan.garcia@example.com,+490659291320,France,L2 4PX,2024-11-29T00:57:57
+cb52cd13-ce73-2862-01be-35db62469b63,Morgan Patel,avery.brown@sample.org,+333356801467,Germany,NE6 7MM,2024-11-01T07:14:53
+03316cf7-d092-76df-2859-04b3da499505,Sam Brown,alex.jones@example.com,+332601075211,Brazil,EC6 7CD,2024-11-02T11:59:12
+f40d4f9e-4c6e-7499-06dd-bb29fea7f574,Quinn Brown,quinn.patel@test.local,+812808042740,France,M7 1EV,2024-02-03T09:46:32
+f46182a7-52f1-9e54-8055-c4080c94e832,Casey Wilson,riley.jones@test.local,+613076580229,Australia,W2 5MK,2023-11-06T22:37:06
+af4a9892-f0d8-629e-d8c3-77a3aa5c7bd0,Avery Davis,jordan.garcia@sample.org,+614545106603,Germany,M9 8RJ,2023-10-14T14:55:38
+c6e19c16-5174-1b4c-e423-78870134a613,Casey Kim,casey.patel@test.local,,France,E9 6TS,2024-03-17T05:07:48
+cd5b929b-8b61-5651-9d83-aee44aab5239,Jamie Smith,taylor.clark@sample.org,+335373681207,Japan,E1 3SN,2024-09-28T20:41:37
+e64258c6-c3ff-82cd-4eec-5959d32b8cdd,Alex Brown,jordan.miller@demo.dev,+619305502890,United States,NW4 6OO,2023-04-25T21:11:04
+da44230e-ba91-f8cc-fafc-7ecc942ceeff,Taylor Wilson,avery.wilson@example.com,+440024825980,Australia,,2023-03-30T02:36:54
+51553954-43e7-4dfa-2668-3ccc619949a9,Sam Davis,jamie.wilson@demo.dev,+16366511734,Brazil,NE4 1WF,2023-10-19T18:17:53
+3c8b9360-293d-5267-979f-59002c512433,Jordan Kim,jordan.jones@test.local,,France,NE7 8WX,2024-03-25T13:52:38
+78147fc9-5d02-9b16-7f8d-2b7114dbfcf9,Taylor Miller,jamie.clark@example.com,+814831855140,France,E4 7VI,2023-03-18T14:22:01
+9da9fcdd-f183-511a-922e-ba11a8756c81,Taylor Jones,sam.smith@sample.org,+441735793574,Canada,L5 1TB,2024-10-29T15:02:09
+fdb15588-7425-ea0c-917d-fe82cc5ca7a2,Riley Brown,quinn.smith@test.local,+819882124663,France,W5 3HA,2024-03-10T08:09:07
+3b0f391e-4296-0da2-2e73-f2af55205c40,Taylor Jones,sam.brown@demo.dev,+14700166943,United States,E3 1HZ,2024-05-09T22:32:11
+1ec3496c-a0ed-f378-01de-4434fdf61ffc,Jamie Kim,jordan.miller@sample.org,+499155164994,Germany,B6 8MZ,2023-11-15T09:01:16
+fc40823f-a717-0505-5075-8c9d0b5e9bd1,Casey Wilson,casey.wilson@example.com,+448530500713,United States,M2 6YH,2023-03-12T06:02:08
+00408141-1ee4-85d5-3e56-524be78c7819,Jordan Smith,alex.patel@test.local,+818928490571,Australia,NW6 8PK,2024-10-17T13:53:19
+bf359e04-6675-aae1-75fc-94ac3f2aedd5,Sam Brown,taylor.garcia@sample.org,+616082232772,France,L7 1TQ,2024-02-12T01:20:53
+c2a661b6-2e05-6d9d-0b18-20ccbdb785f9,Jordan Kim,morgan.clark@example.com,+441038806229,United States,EC9 1MN,2024-02-25T20:43:31
+f7b28584-0e6c-9d89-86cc-098793d323a9,Riley Kim,jordan.wilson@test.local,+614695000473,Canada,W2 9EA,2024-05-18T14:17:35
+525864e4-ca39-72d8-2b2a-e4d2b3f045f1,Alex Kim,morgan.patel@example.com,+814851708494,France,N2 9PJ,2023-01-17T11:28:19
+166bb7b6-d0c0-cc55-6528-bd94df8608ef,Jamie Patel,taylor.brown@example.com,+443398083948,France,M8 2JZ,2023-05-26T19:30:26
+2c1f66e0-9de6-d52a-ef6f-ff97c52a5b9a,Casey Kim,morgan.kim@sample.org,+493887205033,Brazil,N7 5SU,2024-07-25T10:11:08

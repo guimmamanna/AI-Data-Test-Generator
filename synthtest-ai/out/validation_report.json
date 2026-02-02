@@ -1,0 +1,62 @@
+{
+  "dataset": "ecommerce",
+  "mode": "valid",
+  "total_violations": 0,
+  "tables": {
+    "customers": {
+      "table": "customers",
+      "row_count": 100,
+      "violations": {},
+      "rule_violations": 0,
+      "failed_rows": 0,
+      "constraint_coverage": {
+        "type": 700,
+        "unique": 100,
+        "range": 100,
+        "rules": 100,
+        "nullable": 26
+      },
+      "repair_attempts": 110
+    },
+    "orders": {
+      "table": "orders",
+      "row_count": 300,
+      "violations": {},
+      "rule_violations": 0,
+      "failed_rows": 0,
+      "constraint_coverage": {
+        "type": 1500,
+        "foreign_key": 300,
+        "enum": 300,
+        "range": 600,
+        "rules": 300
+      },
+      "repair_attempts": 332
+    },
+    "order_items": {
+      "table": "order_items",
+      "row_count": 800,
+      "violations": {},
+      "rule_violations": 0,
+      "failed_rows": 0,
+      "constraint_coverage": {
+        "type": 4800,
+        "foreign_key": 800,
+        "regex": 800,
+        "range": 2400,
+        "rules": 800
+      },
+      "repair_attempts": 800
+    }
+  },
+  "constraint_coverage": {
+    "type": 7000,
+    "unique": 100,
+    "range": 3100,
+    "rules": 1200,
+    "nullable": 26,
+    "foreign_key": 1100,
+    "enum": 300,
+    "regex": 800
+  }
+}

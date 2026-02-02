@@ -1,0 +1,20 @@
+{
+  "dataset_id": "4d604525-7639-4a0c-a29a-8e6094e81535",
+  "dataset_name": "ecommerce",
+  "seed": 4242,
+  "mode": "valid",
+  "timestamp": "2026-02-02T08:48:10.614019Z",
+  "config_hash": "2dda27dbba503fd70acabae608ed38e50ed2edc85d277ce99fb91d06b02d8f25",
+  "format": "csv",
+  "row_counts": {
+    "customers": 100,
+    "orders": 300,
+    "order_items": 800
+  },
+  "tables": [
+    "customers",
+    "orders",
+    "order_items"
+  ],
+  "max_attempts": 25
+}

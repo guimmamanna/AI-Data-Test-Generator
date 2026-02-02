@@ -1,0 +1,82 @@
+dataset:
+  name: ecommerce
+  seed: 4242
+  mode: valid
+  size:
+    customers: 100
+    orders: 300
+    order_items: 800
+  max_attempts: 25
+
+tables:
+  customers:
+    primary_key: customer_id
+    columns:
+      customer_id:
+        type: uuid
+      name:
+        type: name
+      email:
+        type: email
+        unique: true
+      phone:
+        type: phone
+        nullable: true
+      country:
+        type: country
+      postcode:
+        type: postcode_uk
+        nullable: true
+      created_at:
+        type: datetime
+        range: ["2023-01-01T00:00:00", "2025-01-01T00:00:00"]
+  orders:
+    primary_key: order_id
+    foreign_keys:
+      - column: customer_id
+        ref_table: customers
+        ref_column: customer_id
+    columns:
+      order_id:
+        type: uuid
+      customer_id:
+        type: uuid
+      status:
+        type: enum
+        values: [PAID, FAILED, REFUNDED]
+        weights: [0.7, 0.2, 0.1]
+      total_amount:
+        type: decimal
+        range: [0, 2000]
+        distribution: lognormal
+      created_at:
+        type: datetime
+        range: ["2023-01-01T00:00:00", "2025-01-01T00:00:00"]
+  order_items:
+    primary_key: item_id
+    foreign_keys:
+      - column: order_id
+        ref_table: orders
+        ref_column: order_id
+    columns:
+      item_id:
+        type: uuid
+      order_id:
+        type: uuid
+      sku:
+        type: text
+        regex: "[A-Z]{3}-[0-9]{4}"
+      quantity:
+        type: int
+        range: [1, 10]
+      unit_price:
+        type: decimal
+        range: [1, 250]
+      total_price:
+        type: decimal
+        range: [1, 2500]
+
+rules:
+  - if: "orders.status == 'FAILED'"
+    then:
+      - "orders.total_amount <= 500.0"

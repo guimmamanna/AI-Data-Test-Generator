@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "synthtest-ai"
+version = "0.1.0"
+description = "SynthTest AI: deterministic synthetic test data generator"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [ { name = "SynthTest AI" } ]
+dependencies = [
+  "pydantic>=2.5",
+  "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+api = ["fastapi>=0.110", "uvicorn>=0.27"]
+
+[project.scripts]
+synthtest = "synthtest.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["synthtest*"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+testpaths = ["tests"]
