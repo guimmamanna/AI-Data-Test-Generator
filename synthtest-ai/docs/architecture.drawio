@@ -1,82 +1,65 @@
 <mxfile host="app.diagrams.net" modified="2026-02-02T08:00:00.000Z" agent="GPT" version="24.7.17">
-  <diagram id="synthtest-simple" name="SynthTest AI Flow">
+  <diagram id="synthtest-mvp" name="SynthTest AI MVP Flow">
     <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="900" math="0" shadow="0">
       <root>
         <mxCell id="0"/>
         <mxCell id="1" parent="0"/>
 
         <!-- Nodes -->
-        <mxCell id="n1" value="CLI / REST API&#10;Config-as-code" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=14;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="420" y="40" width="360" height="80" as="geometry"/>
+        <mxCell id="n1" value="CLI" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="40" width="360" height="70" as="geometry"/>
         </mxCell>
 
-        <mxCell id="n2" value="Orchestrator&#10;run mgmt, seeds, caching, metadata" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=14;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="420" y="150" width="360" height="80" as="geometry"/>
+        <mxCell id="n2" value="Config Loader + DSL&#10;YAML / JSON" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="140" width="360" height="80" as="geometry"/>
         </mxCell>
 
-        <mxCell id="n3" value="Schema Manager&#10;DB / OpenAPI / DSL" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=14;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="160" y="270" width="360" height="80" as="geometry"/>
+        <mxCell id="n3" value="Planner&#10;DAG + topo sort" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="250" width="360" height="80" as="geometry"/>
         </mxCell>
 
-        <mxCell id="n4" value="Profiler / Inference&#10;stats, patterns, corr" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=14;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="680" y="270" width="360" height="80" as="geometry"/>
+        <mxCell id="n4" value="Generator Core&#10;PK/FK pools, column generators" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="360" width="360" height="90" as="geometry"/>
         </mxCell>
 
-        <mxCell id="n5" value="Planner&#10;dependency graph, generation plan" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=14;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="420" y="390" width="360" height="80" as="geometry"/>
+        <mxCell id="n5" value="Edge Cases + Rules + Repair&#10;valid/invalid modes" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="480" width="360" height="90" as="geometry"/>
         </mxCell>
 
-        <mxCell id="n6" value="Generator Core&#10;rule + stats + ML plugins" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=14;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="420" y="510" width="360" height="80" as="geometry"/>
+        <mxCell id="n6" value="Exporters&#10;CSV / JSON / SQL" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="600" width="360" height="80" as="geometry"/>
         </mxCell>
 
-        <mxCell id="n7" value="Validator&#10;schema, rules, PII" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=14;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="420" y="630" width="360" height="80" as="geometry"/>
+        <mxCell id="n7" value="Validator + Reports&#10;constraints, FK integrity" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="710" width="360" height="80" as="geometry"/>
         </mxCell>
 
-        <mxCell id="n8" value="Export Layer&#10;CSV / JSON / SQL / DB" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=14;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="420" y="750" width="360" height="80" as="geometry"/>
+        <mxCell id="n8" value="Artifacts&#10;data files + run_metadata.json + validation_report.json" style="rounded=1;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=13;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="820" width="360" height="80" as="geometry"/>
         </mxCell>
 
         <!-- Edges -->
         <mxCell id="e12" style="endArrow=block;endFill=1;html=1;rounded=0;" edge="1" parent="1" source="n1" target="n2">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-
         <mxCell id="e23" style="endArrow=block;endFill=1;html=1;rounded=0;" edge="1" parent="1" source="n2" target="n3">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="480" y="250" as="sourcePoint"/>
-            <mxPoint x="340" y="270" as="targetPoint"/>
-          </mxGeometry>
-        </mxCell>
-
-        <mxCell id="e24" style="endArrow=block;endFill=1;html=1;rounded=0;" edge="1" parent="1" source="n2" target="n4">
-          <mxGeometry relative="1" as="geometry">
-            <mxPoint x="720" y="250" as="sourcePoint"/>
-            <mxPoint x="860" y="270" as="targetPoint"/>
-          </mxGeometry>
-        </mxCell>
-
-        <mxCell id="e35" style="endArrow=block;endFill=1;html=1;rounded=0;" edge="1" parent="1" source="n3" target="n5">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-
+        <mxCell id="e34" style="endArrow=block;endFill=1;html=1;rounded=0;" edge="1" parent="1" source="n3" target="n4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
         <mxCell id="e45" style="endArrow=block;endFill=1;html=1;rounded=0;" edge="1" parent="1" source="n4" target="n5">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-
         <mxCell id="e56" style="endArrow=block;endFill=1;html=1;rounded=0;" edge="1" parent="1" source="n5" target="n6">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-
         <mxCell id="e67" style="endArrow=block;endFill=1;html=1;rounded=0;" edge="1" parent="1" source="n6" target="n7">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-
         <mxCell id="e78" style="endArrow=block;endFill=1;html=1;rounded=0;" edge="1" parent="1" source="n7" target="n8">
           <mxGeometry relative="1" as="geometry"/>
         </mxCell>
-
       </root>
     </mxGraphModel>
   </diagram>

@@ -62,23 +62,28 @@ SynthTest AI is a **schema-driven synthetic data generator** focused on **determ
 ## Architecture
 
 ```
-Schema DSL (YAML/JSON)
-        │
-        ▼
-Dependency Planner (DAG → topo sort)
-        │
-        ▼
-Generator Core
-  ├─ PK/FK pools
-  ├─ Column generators
-  ├─ Edge-case injection
-  └─ Rules / repair loop
-        │
-        ▼
+CLI
+  |
+  v
+Config Loader + DSL (YAML/JSON)
+  |
+  v
+Planner (DAG -> topo sort)
+  |
+  v
+Generator Core (PK/FK pools, column generators)
+  |
+  v
+Edge Cases + Rules + Repair
+  |
+  v
 Exporters (CSV / JSON / SQL)
-        │
-        ▼
+  |
+  v
 Validator + Reports
+  |
+  v
+Artifacts (data files + run_metadata.json + validation_report.json)
 ```
 
 <div align="center">

@@ -12,61 +12,57 @@
   </defs>
 
   <!-- Nodes -->
-  <rect class="node" x="420" y="40" width="360" height="80" rx="14" />
-  <text class="label" x="600" y="72" text-anchor="middle">
-    <tspan x="600" dy="0">CLI / REST API</tspan>
-    <tspan x="600" dy="20" class="sub">Config-as-code</tspan>
+  <rect class="node" x="420" y="40" width="360" height="70" rx="14" />
+  <text class="label" x="600" y="72" text-anchor="middle">CLI</text>
+
+  <rect class="node" x="420" y="140" width="360" height="80" rx="14" />
+  <text class="label" x="600" y="172" text-anchor="middle">
+    <tspan x="600" dy="0">Config Loader + DSL</tspan>
+    <tspan x="600" dy="20" class="sub">YAML / JSON</tspan>
   </text>
 
-  <rect class="node" x="420" y="150" width="360" height="80" rx="14" />
-  <text class="label" x="600" y="182" text-anchor="middle">
-    <tspan x="600" dy="0">Orchestrator</tspan>
-    <tspan x="600" dy="20" class="sub">run mgmt, seeds, caching, metadata</tspan>
-  </text>
-
-  <rect class="node" x="160" y="270" width="360" height="80" rx="14" />
-  <text class="label" x="340" y="302" text-anchor="middle">
-    <tspan x="340" dy="0">Schema Manager</tspan>
-    <tspan x="340" dy="20" class="sub">DB / OpenAPI / DSL</tspan>
-  </text>
-
-  <rect class="node" x="680" y="270" width="360" height="80" rx="14" />
-  <text class="label" x="860" y="302" text-anchor="middle">
-    <tspan x="860" dy="0">Profiler / Inference</tspan>
-    <tspan x="860" dy="20" class="sub">stats, patterns, corr</tspan>
-  </text>
-
-  <rect class="node" x="420" y="390" width="360" height="80" rx="14" />
-  <text class="label" x="600" y="422" text-anchor="middle">
+  <rect class="node" x="420" y="250" width="360" height="80" rx="14" />
+  <text class="label" x="600" y="282" text-anchor="middle">
     <tspan x="600" dy="0">Planner</tspan>
-    <tspan x="600" dy="20" class="sub">dependency graph, generation plan</tspan>
+    <tspan x="600" dy="20" class="sub">DAG + topo sort</tspan>
   </text>
 
-  <rect class="node" x="420" y="510" width="360" height="80" rx="14" />
-  <text class="label" x="600" y="542" text-anchor="middle">
+  <rect class="node" x="420" y="360" width="360" height="90" rx="14" />
+  <text class="label" x="600" y="392" text-anchor="middle">
     <tspan x="600" dy="0">Generator Core</tspan>
-    <tspan x="600" dy="20" class="sub">rule + stats + ML plugins</tspan>
+    <tspan x="600" dy="20" class="sub">PK/FK pools, column generators</tspan>
   </text>
 
-  <rect class="node" x="420" y="630" width="360" height="80" rx="14" />
-  <text class="label" x="600" y="662" text-anchor="middle">
-    <tspan x="600" dy="0">Validator</tspan>
-    <tspan x="600" dy="20" class="sub">schema, rules, PII</tspan>
+  <rect class="node" x="420" y="480" width="360" height="90" rx="14" />
+  <text class="label" x="600" y="512" text-anchor="middle">
+    <tspan x="600" dy="0">Edge Cases + Rules + Repair</tspan>
+    <tspan x="600" dy="20" class="sub">valid/invalid modes</tspan>
   </text>
 
-  <rect class="node" x="420" y="750" width="360" height="80" rx="14" />
-  <text class="label" x="600" y="782" text-anchor="middle">
-    <tspan x="600" dy="0">Export Layer</tspan>
-    <tspan x="600" dy="20" class="sub">CSV / JSON / SQL / DB</tspan>
+  <rect class="node" x="420" y="600" width="360" height="80" rx="14" />
+  <text class="label" x="600" y="632" text-anchor="middle">
+    <tspan x="600" dy="0">Exporters</tspan>
+    <tspan x="600" dy="20" class="sub">CSV / JSON / SQL</tspan>
+  </text>
+
+  <rect class="node" x="420" y="710" width="360" height="80" rx="14" />
+  <text class="label" x="600" y="742" text-anchor="middle">
+    <tspan x="600" dy="0">Validator + Reports</tspan>
+    <tspan x="600" dy="20" class="sub">constraints, FK integrity</tspan>
+  </text>
+
+  <rect class="node" x="420" y="820" width="360" height="80" rx="14" />
+  <text class="label" x="600" y="848" text-anchor="middle">
+    <tspan x="600" dy="0">Artifacts</tspan>
+    <tspan x="600" dy="20" class="sub">data files + run_metadata.json + validation_report.json</tspan>
   </text>
 
   <!-- Edges -->
-  <line class="edge" x1="600" y1="120" x2="600" y2="150" marker-end="url(#arrow)" />
-  <line class="edge" x1="600" y1="230" x2="340" y2="270" marker-end="url(#arrow)" />
-  <line class="edge" x1="600" y1="230" x2="860" y2="270" marker-end="url(#arrow)" />
-  <line class="edge" x1="340" y1="350" x2="600" y2="390" marker-end="url(#arrow)" />
-  <line class="edge" x1="860" y1="350" x2="600" y2="390" marker-end="url(#arrow)" />
-  <line class="edge" x1="600" y1="470" x2="600" y2="510" marker-end="url(#arrow)" />
-  <line class="edge" x1="600" y1="590" x2="600" y2="630" marker-end="url(#arrow)" />
-  <line class="edge" x1="600" y1="710" x2="600" y2="750" marker-end="url(#arrow)" />
+  <line class="edge" x1="600" y1="110" x2="600" y2="140" marker-end="url(#arrow)" />
+  <line class="edge" x1="600" y1="220" x2="600" y2="250" marker-end="url(#arrow)" />
+  <line class="edge" x1="600" y1="330" x2="600" y2="360" marker-end="url(#arrow)" />
+  <line class="edge" x1="600" y1="450" x2="600" y2="480" marker-end="url(#arrow)" />
+  <line class="edge" x1="600" y1="570" x2="600" y2="600" marker-end="url(#arrow)" />
+  <line class="edge" x1="600" y1="680" x2="600" y2="710" marker-end="url(#arrow)" />
+  <line class="edge" x1="600" y1="790" x2="600" y2="820" marker-end="url(#arrow)" />
 </svg>
