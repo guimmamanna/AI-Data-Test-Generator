@@ -61,7 +61,6 @@ SynthTest AI is a **schema-driven synthetic data generator** focused on **determ
 
 ## Architecture
 
-```
 
 <div align="center">
 <img src="docs/architecture.svg" alt="SynthTest AI Architecture Diagram" width="900"/>
